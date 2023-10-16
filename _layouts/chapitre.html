@@ -3,19 +3,20 @@
 <head>
     {% include head.html %}
 </head>
-<body>
+<body id="page-chapitre">
 
     {% include header.html %}
 
     <main id="page-content">
-		<header>
-			<hgroup>
-				<h1>{{ page.title }}</h1>
-			</hgroup>
-		</header>
-
+	
         <!-- Contenu : page de droite -->
 		<section id="main-content">
+            <header>
+                <hgroup>
+                    <h1>{{ page.title }}</h1>
+                </hgroup>
+            </header>
+    
 			<div class="content">
 			{{ content }}
 			</div>
@@ -28,7 +29,10 @@
                   <div id="{{ item.identifiant }}">
                       {{ item.titre }}
                       {{ item.type }}
-                      
+             
+                      <img src=" images/{{ item.image }}"/>
+
+
                   </div>
                 {% endfor %}
                 </div>

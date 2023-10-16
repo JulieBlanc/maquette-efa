@@ -1,0 +1,32 @@
+body{
+    /* background-color: red; */
+}
+
+#page-chapitre header{
+    width: 50vw;
+    height: var(--h-header);
+    position:fixed;
+    left: 50vw;
+    top: 0px;
+    background-color: blue;
+    z-index: 10;
+    
+}
+
+#page-chapitre #main-content{
+    width: 50vw;
+    margin-left: 50vw;
+    display: inline-block;
+    margin-top: var(--h-header);
+    padding: calc(var(--baseline)*4) calc(var(--unit)*2);
+}
+
+#page-chapitre #fiches{
+    width: 50vw;
+    height: 100vh;
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    background-color: red;
+    z-index: 10;
+}
