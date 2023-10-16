@@ -5,5 +5,5 @@
 layout: home
 ---
 
-[introduction](introduction.html)
-[Méthode d'analyse](methode-analyse.html)
+- [Introduction](introduction.html)
+- [Méthode d'analyse](methode-analyse.html)

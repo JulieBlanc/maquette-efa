@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/style.css">
-
+    {% include head.html %}
 </head>
 <body>
+
+    {% include header.html %}
 
     <main id="page-content">
 		<header>
@@ -16,22 +14,24 @@
 			</hgroup>
 		</header>
 
+        <!-- Contenu : page de droite -->
 		<section id="main-content">
 			<div class="content">
 			{{ content }}
 			</div>
 		</section>
 
-
+        <!-- Grille: page de gauche -->
         <section id="fiches">
-            <ul>
+            <div id="grid-fiche">
                 {% for item in site.data.data-efa %}
-                  <li id="{{ item.identifiant }}">
+                  <div id="{{ item.identifiant }}">
                       {{ item.titre }}
                       {{ item.type }}
-                  </li>
+                      
+                  </div>
                 {% endfor %}
-                </ul>
+                </div>
         </section>
 	</main> 
     
