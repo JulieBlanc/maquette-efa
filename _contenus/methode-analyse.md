@@ -1,6 +1,7 @@
 ---
 layout: chapitre
 title:  "Méthode d'analyse"
+chapter: true
 numchap: 2
 ---
 

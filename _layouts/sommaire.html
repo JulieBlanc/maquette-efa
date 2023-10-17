@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     {% include head.html %}
 </head>
-<body id="page-chapitre">
+<body id="page-sommaire">
 
     {% include header.html %}
 
@@ -18,9 +18,22 @@
             </header>
     
 			<div class="content">
-                {{ content }}
-
+			
+            <ul>
                 
+
+           
+            {% assign chapters = site.contenus | sort: 'numchap' %}
+            {% for contenus in chapters %}
+            {% if contenus.layout == "chapitre" %}
+                <li>
+                    <a href="{{ contenus.url }}.html">{{ contenus.title }}</a>
+                </li>
+            {% endif %}
+            {% endfor %}
+
+            </ul>
+
 			</div>
 		</section>
 
