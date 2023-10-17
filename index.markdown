@@ -5,5 +5,3 @@
 layout: home
 ---
 
-- [Introduction](introduction.html)
-- [Méthode d'analyse](methode-analyse.html)

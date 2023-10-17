@@ -3,13 +3,13 @@
 <head>
     {% include head.html %}
 </head>
-<body>
+<body data-layout="{{ page.layout }}" id="page-{{ page.type }}">
 
     {% include header.html %}
-    <section id="main-content">
+    <main>
         <div class="content">
         {{ content }}
         </div>
-    </section>
+    </main>
 
 </body>

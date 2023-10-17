@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     {% include head.html %}
 </head>
-<body>
+<body data-layout="{{ page.layout }}" id="home">
 
-    {% include header.html %}
-    <section id="main-content">
-        <div class="content">
-        {{ content }}
-        </div>
-    </section>
+    <main>
+
+
+        <header>
+            <h1>{{ site.title }} <small>{{ site.subtitle }}</small></h1>
+            <p class="author">{{ site.author }}</p>
+            <p class="editor">{{ site.editor }}</p>
+            <button><a href="sommaire.html">Lire en ligne</a></button>
+        </header>
+    </main>
+
+   
 
 </body>

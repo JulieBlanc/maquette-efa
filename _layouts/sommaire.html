@@ -3,7 +3,7 @@
 <head>
     {% include head.html %}
 </head>
-<body id="page-sommaire">
+<body data-layout="{{ page.layout }}" id="page-sommaire">
 
     {% include header.html %}
 
@@ -12,6 +12,9 @@
         <!-- Contenu : page de droite -->
 		<section id="content-text">
         
+            <header>
+
+            </header>
     
 			<div class="content">
 			
@@ -23,13 +26,22 @@
                 {% assign chapters = site.contenus | sort: 'order' %}
                 {% for contenus in chapters %}
                 {% if contenus.type == "chapitre" %}
-                    <li><a href="{{ contenus.url }}.html"><span>Chapitre {{ contenus.order }}</span> {{ contenus.title }}</a></li>
+                <li class="chapter"><a href="{{ contenus.url }}.html"><span>Chapitre {{ contenus.order }}</span> {{ contenus.title }}</a></li>
                 {% endif %}
                 {% endfor %}
 
                 {% for contenus in site.contenus %}{% if contenus.type == "conclusion" %}
                 <li><a href="{{ contenus.url }}.html">{{ contenus.title }}</a></li>
                 {% endif %}{% endfor %}
+
+                {% for contenus in site.contenus %}{% if contenus.type == "bibliographie" %}
+                <li><a href="{{ contenus.url }}.html">{{ contenus.title }}</a></li>
+                {% endif %}{% endfor %}
+
+                {% for contenus in site.contenus %}{% if contenus.layout == "static" %}
+                <li class="static"><a href="{{ contenus.url }}.html">{{ contenus.title }}</a></li>
+                {% endif %}{% endfor %}
+
 
             </ul>
 
