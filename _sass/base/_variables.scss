@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  
+
+    --background: rgb(251, 250, 248);
+    --text-color: rgb(34, 34, 34);
+
+    --creme-bg: rgb(221, 216, 208);
+    --creme-border: rgb(169, 158, 139);
+
+    // --creme-1: rgb(134, 130, 121);
+    // --creme-2: rgb(240, 233, 219);
+    // --creme-3: rgb(232, 230, 227);
+    // --creme-4:rgb(228, 226, 220);
+    // --creme-5: rgb(251, 250, 248);
+
+    --h-header: 60px;
+    --unit: 20px;
+
+    --border-layout: 1px solid var(--text-color);
+}
+
+body{
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+figure, img{
+    width: 100px;
+}
