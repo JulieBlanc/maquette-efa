@@ -11,26 +11,25 @@
 	
         <!-- Contenu : page de droite -->
 		<section id="content-text">
-            <header>
-                <hgroup>
-                    <h1>{{ page.title }}</h1>
-                </hgroup>
-            </header>
+        
     
 			<div class="content">
 			
             <ul>
-                
-
+                {% for contenus in site.contenus %}{% if contenus.type == "introduction" %}
+                <li><a href="{{ contenus.url }}.html">{{ contenus.title }}</a></li>
+                {% endif %}{% endfor %}
            
-            {% assign chapters = site.contenus | sort: 'numchap' %}
-            {% for contenus in chapters %}
-            {% if contenus.layout == "chapitre" %}
-                <li>
-                    <a href="{{ contenus.url }}.html">{{ contenus.title }}</a>
-                </li>
-            {% endif %}
-            {% endfor %}
+                {% assign chapters = site.contenus | sort: 'order' %}
+                {% for contenus in chapters %}
+                {% if contenus.type == "chapitre" %}
+                    <li><a href="{{ contenus.url }}.html"><span>Chapitre {{ contenus.order }}</span> {{ contenus.title }}</a></li>
+                {% endif %}
+                {% endfor %}
+
+                {% for contenus in site.contenus %}{% if contenus.type == "conclusion" %}
+                <li><a href="{{ contenus.url }}.html">{{ contenus.title }}</a></li>
+                {% endif %}{% endfor %}
 
             </ul>
 

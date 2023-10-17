@@ -1,8 +1,7 @@
 ---
 layout: chapitre
+type: introduction
 title:  "Introduction"
-chapter: true
-numchap: 1
 ---
 
 
