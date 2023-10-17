@@ -8,8 +8,59 @@
     {% include header.html %}
     
     <article id="{{ page.identifiant }}">
-        <h1>{{ page.titre }}</h1>
-        <p>{{ page.type }}</p>
+        <h1>{{ page.identifiant }}</h1>
+        
+
+        <table>
+            <tbody>
+                <tr>
+                  <td>Numéro d'inventaire</td>
+                  <td>{{ page.numero-inventaire }}</td>
+                </tr>
+                <tr>
+                    <td>Objet</td>
+                    <td>{{ page.objet }}</td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>{{ page.type }}</td>
+                </tr>
+                <tr>
+                    <td>Matétiau</td>
+                    <td>{{ page.materiau }}</td>
+                </tr>
+                <tr>
+                    <td>Pâte</td>
+                    <td>{{ page.pate }}</td>
+                </tr>
+                <tr>
+                    <td>Ébauchage</td>
+                    <td>{{ page.ebauchage }}</td>
+                </tr>
+                <tr>
+                    <td>Mise en forme par ECR</td>
+                    <td>{{ page.ecr }}</td>
+                </tr>
+                <tr>
+                    <td>Traitement de la surface</td>
+                    <td>{{ page.traitement-surface }}</td>
+                </tr>
+                <tr>
+                    <td>Couleur de la surface</td>
+                    <td>{{ page.couleur }}</td>
+                </tr>
+                <tr>
+                    <td>Présence et localisation des dépôts de suie</td>
+                    <td>{{ page.suie }}</td>
+                </tr>
+                <tr>
+                    <td>Etat et nature des combustibles</td>
+                    <td>{{ page.combustibles }}</td>
+                </tr>
+
+                
+            </tbody>
+        </table>
     </article>
 
 
