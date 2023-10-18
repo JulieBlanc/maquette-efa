@@ -7,61 +7,71 @@
 
     {% include header.html %}
     
-    <article id="{{ page.identifiant }}">
-        <h1>{{ page.identifiant }}</h1>
-        
+    <main id="{{ page.identifiant }}">
 
-        <table>
-            <tbody>
-                <tr>
-                  <td>{{ site.data.titles-data-efa.numero-inventaire }}</td>
-                  <td>{{ page.numero-inventaire }}</td>
-                </tr>
-                <tr>
-                    <td>{{ site.data.titles-data-efa.objet }}</td>
-                    <td>{{ page.objet }}</td>
-                </tr>
-                <tr>
-                    <td>{{ site.data.titles-data-efa.type }}</td>
-                    <td>{{ page.type }}</td>
-                </tr>
-                <tr>
-                    <td>{{ site.data.titles-data-efa.materiau }}</td>
-                    <td>{{ page.materiau }}</td>
-                </tr>
-                <tr>
-                    <td>{{ site.data.titles-data-efa.pate }}</td>
-                    <td>{{ page.pate }}</td>
-                </tr>
-                <tr>
-                    <td>{{ site.data.titles-data-efa.ebauchage }}</td>
-                    <td>{{ page.ebauchage }}</td>
-                </tr>
-                <tr>
-                    <td>{{ site.data.titles-data-efa.ecr }}</td>
-                    <td>{{ page.ecr }}</td>
-                </tr>
-                <tr>
-                    <td>{{ site.data.titles-data-efa.traitement-surface }}</td>
-                    <td>{{ page.traitement-surface }}</td>
-                </tr>
-                <tr>
-                    <td>{{ site.data.titles-data-efa.couleur }}</td>
-                    <td>{{ page.couleur }}</td>
-                </tr>
-                <tr>
-                    <td>{{ site.data.titles-data-efa.suie }}</td>
-                    <td>{{ page.suie }}</td>
-                </tr>
-                <tr>
-                    <td>{{ site.data.titles-data-efa.combustibles }}</td>
-                    <td>{{ page.combustibles }}</td>
-                </tr>
+        <section id="section-images">
+            <img src="/images/photos/{{ page.photos }}"/>
 
-                
-            </tbody>
-        </table>
-    </article>
+        </section>
+
+
+        <section  id="content-text">
+            <h1>{{ page.identifiant }}</h1>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>{{ site.data.titles-data-efa.numero-inventaire }}</td>
+                        <td>{{ page.numero-inventaire }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.titles-data-efa.objet }}</td>
+                        <td>{{ page.objet }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.titles-data-efa.type }}</td>
+                        <td>{{ page.type }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.titles-data-efa.materiau }}</td>
+                        <td>{{ page.materiau }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.titles-data-efa.pate }}</td>
+                        <td>{{ page.pate }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.titles-data-efa.ebauchage }}</td>
+                        <td>{{ page.ebauchage }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.titles-data-efa.ecr }}</td>
+                        <td>{{ page.ecr }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.titles-data-efa.traitement-surface }}</td>
+                        <td>{{ page.traitement-surface }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.titles-data-efa.couleur }}</td>
+                        <td>{{ page.couleur }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.titles-data-efa.suie }}</td>
+                        <td>{{ page.suie }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ site.data.titles-data-efa.combustibles }}</td>
+                        <td>{{ page.combustibles }}</td>
+                    </tr>
+
+                    
+                </tbody>
+            </table>
+        </section>
+
+
+    </main>
 
 
     

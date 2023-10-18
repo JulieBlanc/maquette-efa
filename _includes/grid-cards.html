@@ -5,16 +5,19 @@
 
 
     <div id="grid">
-        <!-- {% for item in site.data.data-efa %}
-            <div id="{{ item.identifiant }}">
-                {{ item.titre }}
-                {{ item.type }}
-        
-                <img src=" images/{{ item.image }}"/>
-
-
-            </div>
-        {% endfor %} -->
+        {% for item in site.data.data-efa %}
+            <article class="card" id="{{ item.identifiant }}">   
+                <a href="/fiches/{{ item.identifiant | downcase }}.html">   
+                    <figure>
+                        <img src="/images/photos/{{ item.photos }}"/>
+                    </figure>
+                    <ul>
+                        <li class="identidiant">{{ item.identifiant }}</li>
+                        <li class="numero-inventaire">{{ item.numero-inventaire }}</li>
+                    </ul>
+                </a>  
+            </article>
+        {% endfor %}
     </div>
         
 </section>

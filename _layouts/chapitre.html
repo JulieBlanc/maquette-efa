@@ -9,7 +9,7 @@
 
     <main>
 	
-        <!-- Contenu : page de droite -->
+        <!-- Contenu (sur écran large, section de droite) -->
 		<section id="content-text">
             <header>
                 <hgroup>
@@ -24,29 +24,8 @@
 			</div>
 		</section>
 
-        <!-- Grille: page de gauche -->
-        <section id="grid-cards">
-
-            <nav>
-
-            </nav>
-
-
-            <div id="grid">
-                <!-- {% for item in site.data.data-efa %}
-                  <div id="{{ item.identifiant }}">
-                      {{ item.titre }}
-                      {{ item.type }}
-             
-                      <img src=" images/{{ item.image }}"/>
-
-
-                  </div>
-                {% endfor %} -->
-
-            </div>
-                
-        </section>
+         <!-- Grille (sur écran large, section de gauche) -->
+         {% include grid-cards.html %}
 
 	</main> 
     
